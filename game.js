@@ -1,3 +1,5 @@
+
+// Timer
 const timeH = document.querySelector('h1');
 let timeSecond = 80
 timeH.innerHTML = `00:${timeSecond}`;
@@ -9,6 +11,8 @@ if(timeSecond <=0 || timeSecond<1){
     clearInterval(countDown)
 }
 },1000)
+
+//Variables
 
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
@@ -27,6 +31,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+// Questions
 let questions = [
     {
         question: 'Commonly used data types do not include?',
@@ -142,48 +147,10 @@ const handleChoiceClick = (e) => {
         }, 1000)
 
         }
-
+//Event Listners
 choiceA.addEventListener('click', handleChoiceClick);
 choiceB.addEventListener('click', handleChoiceClick);
 choiceC.addEventListener('click', handleChoiceClick);
 choiceD.addEventListener('click', handleChoiceClick);
-
-
-//choices.forEach(choice => {
-  //  choice.addEventListener('click', (e) => {
-    //    console.log(e);
-      //  if (!acceptingAnswers) return
-
-//        acceptingAnswers = false
-
-  //      })
-
-       
-    //    const selectedChoice = e.target 
-      //  const selectedAnswer = selectedChoice.dataset['number']
-
-        //let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-
-        //if(classToApply === 'correct') {
-          //  incrementScore(SCORE_POINTS)
-       // }
-
-       // selectedChoice.parentElement.classList.add(classToApply)
-
-        //setTimeout(() => {
-          //  selectedChoice.parentElement.classList.remove(classToApply)
-            //getNewQuestion()
-
-       // }, 1000)
-
-    //})
-
-
-
-
-// incrementScore = num => {
-   // score += num
-    //scoreText.innerText = score
-//}
 
 startGame()
